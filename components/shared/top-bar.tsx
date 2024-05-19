@@ -10,6 +10,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import Logo from "../svg/logo";
 
 const TopBar = () => {
   return (
@@ -23,7 +24,7 @@ const TopBar = () => {
                   href="/"
                   className="flex items-center space-x-3 rtl:space-x-reverse"
                 >
-                  Liva
+                  <Logo />
                 </Link>
                 <SheetTrigger
                   data-collapse-toggle="navbar-default"
@@ -43,7 +44,7 @@ const TopBar = () => {
                   <ul className="justify-center items-center font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
                     <li>
                       <Button variant="gooeyRight" size="lg" asChild>
-                        <Link href="/login">Log In</Link>
+                        <Link href="/login">Sign In</Link>
                       </Button>
                     </li>
                     <li>
