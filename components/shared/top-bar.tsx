@@ -14,70 +14,49 @@ import { Menu } from "lucide-react";
 const TopBar = () => {
   return (
     <Sheet>
-      <nav className="bg-background border-b fixed top-0 z-10 w-full">
-        <div className="container  xl:px-0 flex flex-wrap items-center justify-between mx-auto p-4 top-0">
-          <Link
-            href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-          </Link>
-          <SheetTrigger
-            data-collapse-toggle="navbar-default"
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
-            <Menu />
-          </SheetTrigger>
+      <header>
+        <div className="absolute left-0 right-0 top-2 z-40 pt-14">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl lg:max-w-none">
+              <div className="flex items-center justify-between">
+                <Link
+                  href="/"
+                  className="flex items-center space-x-3 rtl:space-x-reverse"
+                >
+                  Liva
+                </Link>
+                <SheetTrigger
+                  data-collapse-toggle="navbar-default"
+                  type="button"
+                  className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                  aria-controls="navbar-default"
+                  aria-expanded="false"
+                >
+                  <span className="sr-only">Open main menu</span>
+                  <Menu />
+                </SheetTrigger>
 
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="justify-center items-center font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-              {/* <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                <div
+                  className="hidden w-full md:block md:w-auto"
+                  id="navbar-default"
                 >
-                  Benefits
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Demo
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Testimonials
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  FAQ
-                </a>
-              </li> */}
-              <li>
-                <Button variant="default" asChild>
-                  <Link href="/login">Log In</Link>
-                </Button>
-              </li>
-              <li>
-                <ModeToggle />
-              </li>
-            </ul>
+                  <ul className="justify-center items-center font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                    <li>
+                      <Button variant="gooeyRight" size="lg" asChild>
+                        <Link href="/login">Log In</Link>
+                      </Button>
+                    </li>
+                    <li>
+                      <ModeToggle />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
+        <nav className="relative z-50 overflow-hidden bg-neutral-950 pt-2 dark:bg-vanta-700 dark:bg-white"></nav>
+      </header>
       <SheetContent>
         <SheetHeader>
           <SheetTitle>Are you absolutely sure?</SheetTitle>
